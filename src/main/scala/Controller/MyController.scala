@@ -10,9 +10,9 @@ class MyController(model: MyModel) extends ControllerFX :
 
   @jfxf.FXML
   private var pressMeButton: jfxsc.Button = _
-  private var pressList: jfxsc.ListView[String] = _
+  @jfxf.FXML
+  private var countLabel: jfxsc.Label = _
 
   override def initialize(): Unit =
-    println("initialize")
     pressMeButton.onAction = () => model.onClick()
-    pressList.setItems(model.pressItems)
+    model.count.onChange{ (_, _, v) => countLabel.setText( "" + v) }

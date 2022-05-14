@@ -6,12 +6,10 @@ import org.scalafx.extras.*
 import org.scalafx.extras.mvcfx.ModelFX
 import scalafx.Includes.*
 import javafx.collections.FXCollections.*
-
+import scalafx.beans.property.IntegerProperty
 class MyModel extends ModelFX :
 
-  val pressItems: ObservableList[String] = emptyObservableList()
+  val count: IntegerProperty = IntegerProperty(0)
 
   def onClick(): Unit =
-    println("pressed")
-    pressItems.add("Pressed")
-
+    count.value = count.value + 1

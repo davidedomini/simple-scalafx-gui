@@ -5,7 +5,9 @@
 <?import javafx.scene.layout.*?>
 
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.MyController">
    <bottom>
       <Button fx:id="pressMeButton" mnemonicParsing="false" text="Press me" BorderPane.alignment="CENTER">
          <font>
@@ -14,6 +16,11 @@
       </Button>
    </bottom>
    <center>
-      <ListView fx:id="pressList" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <Label fx:id="countLabel" alignment="CENTER" contentDisplay="CENTER" text="0" textAlignment="CENTER"
+             BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Lucida Sans Typewriter Regular" size="96.0"/>
+         </font>
+      </Label>
    </center>
 </BorderPane>
